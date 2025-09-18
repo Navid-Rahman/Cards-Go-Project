@@ -3,9 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	cards := newCard()
 
-	fmt.Println(cards)
+	// This is a Slice example
+	cards := []string{newCard(), "Six of Diamond", "Two of Hearts"}
+
+	for i, card := range cards {
+
+		fmt.Println(i, card)
+	}
 
 }
 

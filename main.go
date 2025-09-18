@@ -2,9 +2,11 @@ package main
 
 func main() {
 
-	// This is a Slice example
 	cards := newDeck()
 
-	cards.print()
+	hand, remainingCards := deal(cards, 5)
+
+	hand.print()
+	remainingCards.print()
 
 }

@@ -1,22 +1,10 @@
 package main
 
-import "fmt"
-
 func main() {
 
 	// This is a Slice example
-	cards := []string{newCard(), "Six of Diamond", "Two of Hearts"}
+	cards := newDeck()
 
-	cards = append(cards, "Five of Clubs")
+	cards.print()
 
-	for i, card := range cards {
-
-		fmt.Println(i, card)
-	}
-
-}
-
-func newCard() string {
-
-	return "Ace of Spades"
 }

@@ -1,3 +1,4 @@
+// Tests for the deck implementation. Run with `go test`.
 package main
 
 import (
@@ -5,6 +6,8 @@ import (
 	"testing"
 )
 
+// TestNewDeck verifies that newDeck constructs a deck with the expected
+// number of cards and preserves a stable order for the first and last cards.
 func TestNewDeck(t *testing.T) {
 
 	d := newDeck()
@@ -22,6 +25,8 @@ func TestNewDeck(t *testing.T) {
 	}
 }
 
+// TestSaveToDeckAndNewDeckFromFile ensures a deck can be serialized to disk
+// and reconstructed from that file. It uses a throwaway test filename.
 func TestSaveToDeckAndNewDeckFromFile(t *testing.T) {
 	os.Remove(("_deckTesting"))
 

@@ -2,26 +2,29 @@ package main
 
 import "fmt"
 
+type contactInfo struct {
+	email   string
+	zipCode int
+}
+
 type person struct {
 	firstName string
 	lastName  string
+	contact   contactInfo
 }
 
 func main() {
-	// 1st way of defining struct
-	navid := person{"Navid", "Rahman"}
+	navid := person{
+		firstName: "Navid",
+		lastName:  "Rahman",
+		contact: contactInfo{
+			email:   "navidrahman92@gmail.com",
+			zipCode: 1234,
+		},
+	}
+
 	fmt.Println(navid)
 
-	// 2nd way of defining struct
-	seyam := person{firstName: "Sadman", lastName: "Seyam"}
-	fmt.Println(seyam)
+	fmt.Printf("%+v", navid)
 
-	// 3rd way of defining struct
-	var fatin person
-	fmt.Println(fatin)
-	fmt.Printf("%+v", fatin)
-
-	fatin.firstName = "Fatin"
-	fatin.lastName = "Benyamin"
-	fmt.Println(fatin)
 }

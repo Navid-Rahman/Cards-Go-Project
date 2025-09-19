@@ -20,4 +20,8 @@ func main() {
 	var fatin person
 	fmt.Println(fatin)
 	fmt.Printf("%+v", fatin)
+
+	fatin.firstName = "Fatin"
+	fatin.lastName = "Benyamin"
+	fmt.Println(fatin)
 }
